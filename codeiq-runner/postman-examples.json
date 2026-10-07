@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "CodeIQ Runner",
+    "description": "Import these examples into Postman. Set variable runner_url to http://localhost:8080"
+  },
+  "requests": [
+    {
+      "name": "Health",
+      "method": "GET",
+      "url": "{{runner_url}}/health"
+    },
+    {
+      "name": "Python3 - Sum",
+      "method": "POST",
+      "url": "{{runner_url}}/execute",
+      "body": {
+        "language": "python3",
+        "source": "a, b = map(int, input().split())\nprint(a + b)",
+        "stdin": "5 7",
+        "timeoutSeconds": 5
+      }
+    },
+    {
+      "name": "Cpp17 - Sum",
+      "method": "POST",
+      "url": "{{runner_url}}/execute",
+      "body": {
+        "language": "cpp17",
+        "source": "#include <iostream>\nusing namespace std;\nint main() {\n    int a, b;\n    cin >> a >> b;\n    cout << a + b << endl;\n    return 0;\n}",
+        "stdin": "5 7",
+        "timeoutSeconds": 5
+      }
+    },
+    {
+      "name": "C - Sum",
+      "method": "POST",
+      "url": "{{runner_url}}/execute",
+      "body": {
+        "language": "c",
+        "source": "#include <stdio.h>\nint main() {\n    int a, b;\n    scanf(\"%d %d\", &a, &b);\n    printf(\"%d\\n\", a + b);\n    return 0;\n}",
+        "stdin": "5 7",
+        "timeoutSeconds": 5
+      }
+    },
+    {
+      "name": "JavaScript - Sum",
+      "method": "POST",
+      "url": "{{runner_url}}/execute",
+      "body": {
+        "language": "javascript",
+        "source": "const fs = require('fs');\nconst input = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\nconsole.log(Number(input[0]) + Number(input[1]));",
+        "stdin": "5 7",
+        "timeoutSeconds": 5
+      }
+    }
+  ]
+}
