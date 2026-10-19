@@ -1,0 +1,67 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / editors
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# .NET
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.pdb
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+.nuget/
+*.DotSettings.user
+
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python (code runner)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local databases (SQLite dev)
+*.db
+*.db-shm
+*.db-wal
+
+# Docker / tooling
+*.log
+
+# Test / coverage
+coverage/
+TestResults/
+*.coverage
+*.coveragexml
+
+# Cursor / agent (optional local artifacts)
+.cursor/projects/

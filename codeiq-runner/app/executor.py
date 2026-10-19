@@ -99,7 +99,7 @@ def execute_code(
             source_path = work_dir / "main.py"
             source_path.write_text(source, encoding="utf-8")
             stdout, stderr, exit_code, time_ms = _run_process(
-                ["python3", str(source_path)],
+                ["python3", "-u", str(source_path)],
                 work_dir,
                 stdin,
                 timeout_seconds,
